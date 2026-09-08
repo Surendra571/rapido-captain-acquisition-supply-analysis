@@ -1,0 +1,5 @@
+Rank,Funnel Stage,Captains Dropped,Loss Share (%),Primary Root Cause,Actionability,Expected Scenario Impact
+#1 (PRIMARY LEAK),Stage 3: Registration Certificate (RC),6102,29.35%,63.63% fixable camera blur & OCR name/chassis mismatch; 13.42% low-tier device pass rate,Direct VAHAN / DigiLocker API auto-fetch removes upload friction entirely,+75 to +85 approved captains/mo (+450 to +510 over 6 mo)
+#2,Stage 2: Driving Licence (DL),4211,20.24%,Initial signup intent drop-off / cold abandonment before 1st document,Immediate onboarding nudge within 15 min; instant DL OCR pre-fill,+40 to +50 approved captains/mo
+#3,Stage 4: Aadhaar,3833,18.43%,OTP verification latency and mobile number mismatch with UIDAI,Aadhaar Paperless Offline e-KYC XML / QR code scan,+35 to +45 approved captains/mo
+#4,Stage 5: Permit (Auto & Cab),2933,14.11%,Commercial permit renewal delays at local RTO offices,State RTO digital queue integration & temporary operational permit waivers,+25 to +35 approved captains/mo

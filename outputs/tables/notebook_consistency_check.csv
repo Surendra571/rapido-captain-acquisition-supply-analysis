@@ -1,0 +1,11 @@
+metric,notebook_1_value,notebook_2_value,notebook_3_value,expected_source,status
+Total Signup Volume,"25,000","25,000",N/A (Airport focus),captains.csv,PASS (Exact match)
+Terminal Approved Captains (A2O),"4,206 (16.82%)","4,206 (16.82%)",N/A,approvals.csv,PASS (Exact match)
+Mature Cohort Conversion (>15d),"17.57% (3,938 / 22,407)","17.57% (3,938 / 22,407)",N/A,captains.csv (< June 15),PASS (Exact match)
+In-Progress Captains (Isolated to last 15d),"1,297 captains","1,297 captains",N/A,approvals.csv (>= June 15),PASS (Exact match)
+RC Stage 3 Drop-Off Volume,N/A (Raw events),"6,102 drops (29.35% loss share)",N/A,doc_events.csv / funnel.py,PASS (Exact match)
+RC Blur / OCR Failure Share,63.63% (Fixable reasons),63.63% (39.5% blur + 24.1% OCR),N/A,doc_events.csv,PASS (Exact match)
+CAMP_WA_002 Stage-Matched Lift,N/A,+4.48% pts (95% CI: 3.12-5.84%),N/A,nudges.csv / campaign.py,PASS (Exact match)
+Total Unmet Terminal Airport Demand,"55,053 lost requests",N/A,"55,053 lost requests",airport_hourly.csv,PASS (Exact match)
+Nocturnal Airport Deficit Share (21-03h),N/A,"77.51% (42,673 lost requests)","77.51% (42,673 lost requests)",airport_hourly.csv,PASS (Exact match)
+Suburban Drop Share & Night Stranded Rate,N/A,41.07% suburb share; 88.94% night deadhead,41.07% suburb share; 88.94% night deadhead,airport_trips.csv,PASS (Exact match)

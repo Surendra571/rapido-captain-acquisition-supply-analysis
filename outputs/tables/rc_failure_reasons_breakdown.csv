@@ -1,0 +1,8 @@
+Failure Reason,Event Count,Share (%),Category
+image_blurred,2288,27.99,Structural (Doc Validity)
+ocr_low_confidence,1773,21.69,Structural (Doc Validity)
+name_mismatch,1124,13.75,Structural (Doc Validity)
+document_expired,910,11.13,Structural (Doc Validity)
+details_not_legible,837,10.24,Structural (Doc Validity)
+wrong_document_type,789,9.65,Structural (Doc Validity)
+duplicate_document,453,5.54,Structural (Doc Validity)

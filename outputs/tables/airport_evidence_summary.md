@@ -1,0 +1,8 @@
+| Metric                           | Daytime (04-20h)         | Night (21-03h)            | Difference                           | Interpretation                       |
+|:---------------------------------|:-------------------------|:--------------------------|:-------------------------------------|:-------------------------------------|
+| Airport Total Unfulfilled Demand | 12,380 trips (3.10% gap) | 42,673 trips (52.80% gap) | +30,293 lost trips (+49.70% pts gap) | Shortage is 77.51% nocturnal         |
+| Airport Fulfillment Rate         | 96.90%                   | 47.20%                    | -49.70% pts                          | Severe nocturnal market collapse     |
+| Average Surge Multiplier         | 1.05x                    | 2.17x                     | +1.12x surge                         | Pricing clearing mechanism maxed out |
+| Average Passenger ETA            | 3.8 min                  | 10.0 min                  | +6.2 min                             | Severe spatial supply deficit        |
+| Suburb Return Fare Rate (20m)    | 18.37%                   | 11.06%                    | -7.31% pts                           | 88.94% night stranded deadhead rate  |
+| Suburb Cancellation Rate         | 19.83%                   | 24.50%                    | +4.67% pts                           | Driver avoidance of deadheading      |

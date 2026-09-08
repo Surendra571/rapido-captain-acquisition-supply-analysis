@@ -1,0 +1,6 @@
+Relationship,Source Records,Source Unique IDs,Unmatched Foreign Keys,Coverage (% of Captains),Status,Coverage (% of Approved),Coverage (% of Hourly Zones)
+approvals.captain_id -> captains.captain_id,25000,25000,0,100.00%,PASS (Exact 1:1 match),,
+doc_events.captain_id -> captains.captain_id,186282,23303,0,93.21%,PASS (Valid subsets; 1697 captains never attempted upload),,
+activation.captain_id -> approvals(approved).captain_id,4206,4206,0,,PASS (Exact 1:1 match with approved captains),100.00%,
+nudges.captain_id -> captains.captain_id,16314,13667,0,54.67%,PASS (Valid subsets; nudges targeted specific captains),,
+airport_trips.pickup_zone_id -> airport_hourly.zone_id,60000,2,0,,PASS (Pickups APT-T1 and APT-T2 exist in hourly),,28.57%

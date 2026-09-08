@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Executive Memo - Rapido Marketplace Strategy</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 12mm 14mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.28;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f59e0b;
+    padding-bottom: 3px;
+  }
+  .meta-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    color: #475569;
+    margin-bottom: 8px;
+    background: #f8fafc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+  .meta-item { font-weight: 600; }
+  h3 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 6px 0 3px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-left: 3px solid #0284c7;
+  }
+  p { margin: 0 0 4px 0; }
+  ul {
+    margin: 0 0 5px 0;
+    padding-left: 14px;
+  }
+  li { margin-bottom: 2.5px; }
+  strong { color: #0f172a; font-weight: 700; }
+  hr { border: none; border-top: 1px solid #cbd5e1; margin: 5px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.5pt;
+    margin: 4px 0 6px 0;
+  }
+  th, td {
+    padding: 3px 5px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 7pt;
+  }
+  tr:nth-child(even) { background-color: #f8fafc; }
+  .highlight { color: #b45309; font-weight: 700; }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<h1>Strategic Briefing: Captain Onboarding Conversion & Airport Supply Architecture</h1>
+
+<div class="meta-box">
+  <div><span class="meta-item">TO:</span> Head of Supply, Rapido</div>
+  <div><span class="meta-item">FROM:</span> Senior Data Scientist, Marketplace Strategy</div>
+  <div><span class="meta-item">DATE:</span> September 8, 2026</div>
+  <div><span class="meta-item">SCOPE:</span> 25,000 Signups & 60,000 Airport Trips</div>
+</div>
+
+<h3>Executive Takeaways</h3>
+<ul>
+  <li><strong>The Onboarding Funnel is Bleeding at Vehicle RC</strong>: Overall onboarding conversion is only <strong>16.82%</strong> (4,206 approved / 25,000 signups). The single largest volume leak is <strong>Registration Certificate (RC) Stage 3</strong>, where <strong>6,102 captains (29.35% of all losses)</strong> drop out—driven primarily by mechanical camera blur and OCR failures (63.63% of RC errors) on low-tier smartphones.</li>
+  <li><strong>The Claimed 17.9% WhatsApp Nudge Lift is Confounded by Selection Bias</strong>: The business claim that campaign <code>CAMP_WA_002</code> drove a +17.90% lift is an artifact of immortal-time bias (100.0% of recipients had already survived DL and RC verification). When compared against stage-matched controls, the adjusted observational association is <strong>+4.48% pts (95% CI: +3.12% to +5.84% pts)</strong>, with 0% engagement lift among clickers. <strong>Do not scale budget 5x without a controlled A/B test.</strong></li>
+  <li><strong>Airport Shortage is a Nocturnal Deadhead Problem, Not an Acquisition Deficit</strong>: The airport marketplace is 96.90% fulfilled during the day, but crashes to <strong>47.20% fulfillment between 21:00 and 03:00</strong> (accounting for 77.51% of unmet demand / 42,673 lost trips/mo). For suburban drops (<code>SUB-07</code>, <code>SUB-11</code>), return-fare access falls to <strong>11.06% at night</strong>, driving a <strong>24.50% cancellation rate</strong>.</li>
+  <li><strong>Core Strategic Directive</strong>: <strong>Do NOT fund broad airport driver acquisition.</strong> The airport is a leaky bucket exporting drivers into suburbs. Instead, deploy <strong>Direct VAHAN API Auto-Fetch</strong> for RC onboarding, <strong>Run a Controlled RCT on WhatsApp Nudges</strong>, and <strong>Deploy Forward-Dispatch & Suburban Return Subsidies</strong>.</li>
+</ul>
+
+<h3>1. Onboarding Health & Funnel Leak Diagnosis</h3>
+<ul>
+  <li><strong>Funnel Conversion Reality (A2O & R2A)</strong>: Out of 25,000 signups, 20,789 clear DL (83.16%), 14,687 clear RC (58.75%), 10,854 clear Aadhaar (43.42%), 7,921 pass Permit/Doc-4 (31.68%), 5,612 clear Fitness (22.45%), 4,206 clear Insurance (16.82%), and <strong>4,206 reach Final Approval (16.82% A2O)</strong>. Post-approval activation (R2A) is <strong>85.00%</strong> (3,575 active captains). Among mature cohorts (&gt;15 days before extraction), conversion is <strong>17.57%</strong>; all 1,297 in-progress signups are isolated to the final 15 days.</li>
+  <li><strong>The Biggest Volume Loss</strong>: <strong>Stage 3 (Registration Certificate — RC)</strong> loses <strong>6,102 captains (29.35% of all drop-offs)</strong>, making it the primary system constraint.</li>
+  <li><strong>The Most Important Fixable Leak</strong>: 34.82% of captains fail RC verification at least once, and <strong>50.10% abandon immediately after failure</strong>. Root causes are heavily technical: <strong>63.63% of RC errors</strong> stem from blurry photos (39.54%) and OCR name/chassis mismatches (24.09%). This disproportionately hurts <strong>low-tier phone users</strong>, who convert at only <strong>13.42%</strong> (vs 21.81% on high-tier) and suffer 75.6% of blur failures.</li>
+</ul>
+
+<h3>2. Campaign Evaluation: CAMP_WA_002</h3>
+<ul>
+  <li><strong>The Reality Behind the Claim</strong>: <code>CAMP_WA_002</code> sent WhatsApp messages to 8,673 captains. While recipients show an unadjusted 28.51% approval rate vs 10.61% for all non-recipients (a naive "+17.90% pt win"), <strong>100.0% of treated captains had ALREADY passed DL and RC</strong> before receiving the message.</li>
+  <li><strong>Stage-Matched Observational Lift</strong>: Comparing treated captains against untreated controls who also cleared DL+RC yields an approval rate of <strong>28.51% vs 24.14%</strong> (&Delta; = <strong>+4.37% pts</strong>). Adjusting for city, vehicle, channel, device tier, age, and month via logistic regression yields <strong>+4.48% pts (95% CI: +3.12% to +5.84% pts, p &lt; 0.001)</strong>.</li>
+  <li><strong>Causal Status & Confidence</strong>: This is strictly an <strong>observational association, not causal proof</strong>. Captains who clicked the link converted at <strong>28.24%</strong>, identical to non-clickers (<strong>28.70%</strong>), proving the message acted as passive awareness rather than active friction removal.</li>
+  <li><strong>Decision on 5x Budget Scaling</strong>: <strong>REJECT 5x budget scale.</strong> Do not commit capital to linear broadcast blasts. Instead, execute a 50/50 randomized holdout experiment (N=3,305/arm) to test an automated 2-way failure-recovery bot.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h3>3. Airport Supply & Marketplace Dynamics</h3>
+<ul>
+  <li><strong>When and Where Shortage Occurs</strong>: Undersupply is strictly nocturnal. Daytime (04:00–20:00) is healthy (<strong>96.90% fulfillment</strong>, ETA 3.8 min, Surge 1.05x). The <strong>21:00–03:00 window collapses to 47.20% fulfillment</strong> (26.24% at 23:00), with surge averaging 2.17x and ETAs hitting 10.0 minutes.</li>
+  <li><strong>Magnitude of Deficit</strong>: <strong>42,673 requests go unfulfilled during the night window (77.51% of all unmet airport demand)</strong>, averaging ~710 lost requests per night.</li>
+  <li><strong>Post-Trip Trajectory & The Deadhead Trap</strong>: Airport trips average 17.9 km (₹279 fare). However, <strong>41.07% of trips drop passengers in suburban zones (<code>SUB-07</code>, <code>SUB-11</code>)</strong>, where the night return-fare rate is only <strong>11.06% (88.94% stranded rate)</strong>. Suburban night cancellations spike to <strong>24.50%</strong> as drivers reject unpaid 30 km return deadheading.</li>
+  <li><strong>Targeted Acquisition Decision</strong>: <strong>NOT RECOMMENDED.</strong> Acquiring drivers around the airport creates a leaky bucket—drivers take suburban trips and are immediately drained from the catchment. We must fix return economics and turnaround speed first.</li>
+</ul>
+
+<h3>4. Three Ranked Strategic Recommendations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;">Rank</th>
+      <th style="width: 25%;">Strategic Action</th>
+      <th style="width: 25%;">Target Problem</th>
+      <th style="width: 20%;">Expected Impact (Scenario)</th>
+      <th style="width: 12%;">Cost & Risk</th>
+      <th style="width: 13%;">Primary Metric</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>#1</strong></td>
+      <td><strong>Direct VAHAN API Auto-Fetch & Blur Guidance</strong><br>Replace manual RC photo upload with instant RTO vehicle lookup via Reg Number + OTP; add client-side blur detection.</td>
+      <td>RC Stage 3 drop-off (6,102 drops; 63.6% blur/OCR failure share).</td>
+      <td><strong>+75 to +85 Approved Captains / month</strong> (+450 to +510 over 6 mo). Formula: 3,465 DL passers &times; 16.82% &Delta;pass &times; 28.64% downstream &times; 50% capture.</td>
+      <td>API fee (₹5–8/call); RTO downtime mitigated via manual fallback.</td>
+      <td><strong>RC First-Time Pass Rate</strong> (&ge; 82%, from 65.2%) &amp; Low-Tier Pass (&ge; 75%).</td>
+    </tr>
+    <tr>
+      <td><strong>#2</strong></td>
+      <td><strong>Controlled RCT Experiment on Nudges Before 5x Scaling</strong><br>Halt broadcast blast; launch 50/50 RCT (N=3,305/arm) testing an event-driven 2-way WhatsApp failure-resolution bot.</td>
+      <td>Immortal-time bias in naive claim (+17.9% pts); true lift +4.5% pts; 0% clicker lift.</td>
+      <td><strong>Protects ₹15–20L marketing budget</strong>; sizes true incremental ROI; test 2-way bot.</td>
+      <td>Opportunity cost of holding out 3,305 captains during 6-week trial.</td>
+      <td><strong>14-Day Incremental Approval Lift</strong> (&ge; +3.0% pts, RCT verified; p &lt; 0.05).</td>
+    </tr>
+    <tr>
+      <td><strong>#3</strong></td>
+      <td><strong>Airport Forward-Dispatch & Suburban Return Subsidies</strong><br>Pre-match inbound airport drops 5–7 min before terminal arrival; provide ₹120 return allowance for SUB-07/SUB-11 night drops.</td>
+      <td>77.5% nocturnal airport shortage &amp; suburban deadhead trap (88.9% night stranded rate).</td>
+      <td><strong>+15,500 to +20,000 Fulfilled Trips / month</strong> (Forward-dispatch: +9k–12k; Return allowance: +6.5k–8k).</td>
+      <td>₹120 allowance funded via existing 2.17x night surge pool (net subsidy &le; ₹45/trip).</td>
+      <td><strong>Airport Night Fulfillment</strong> (&ge; 70%, from 47.2%) &amp; Suburb Cancels (&lt; 10%).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5. Assumptions & What Would Change My Answer</h3>
+<ul>
+  <li><strong>Downstream Conversion Multiplier (28.64%)</strong>: Assumes captains rescued at RC pass downstream stages (Aadhaar &rarr; Insurance) at historical rates. <em>What changes answer</em>: If RC-failing drivers possess uninsurable vehicles (downstream pass &lt;15%), net approvals drop to +44/mo, shifting priority to Insurance FinTech financing.</li>
+  <li><strong>Suburban Deadheading Elasticity</strong>: Assumes night cancellations (24.50%) are driven by return economics (11.06% return fare rate). <em>What changes answer</em>: If cancellations stem from personal driver night-shift curfews rather than fuel economics, return subsidies will have lower elasticity.</li>
+  <li><strong>Government VAHAN API Uptime</strong>: Assumes &ge;90% digital coverage across RTO databases in target cities. <em>What changes answer</em>: If rural vehicle registration records have high latency, on-device native camera guides become the primary path.</li>
+</ul>
+
+</body>
+</html>

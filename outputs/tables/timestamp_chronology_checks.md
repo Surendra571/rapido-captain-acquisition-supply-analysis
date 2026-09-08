@@ -1,0 +1,8 @@
+| Check                                            |   Violations Count | Notes                                                                                                             |
+|:-------------------------------------------------|-------------------:|:------------------------------------------------------------------------------------------------------------------|
+| decision_ts >= signup_ts                         |                  0 | All decision timestamps occur strictly after signup.                                                              |
+| first_order_ts >= decision_ts                    |                  0 | All first orders occur strictly after approval decision.                                                          |
+| doc_event_ts >= signup_ts                        |                  0 | All doc upload and verification events occur after signup.                                                        |
+| nudge_sent_ts >= signup_ts                       |                  0 | All nudge notifications sent after signup timestamp.                                                              |
+| Approved captains must have decision_ts          |                  0 | All 4,206 approved captains have non-null decision_ts.                                                            |
+| Rejected / Dropped captains decision_ts tracking |                  0 | Rejected captains with decision_ts: 435 (435/435). Dropped captains have decision_ts == NaN (censored drop-offs). |

@@ -1,0 +1,6 @@
+| time_window                                     |   city_core |   suburban |   tech_park |
+|:------------------------------------------------|------------:|-----------:|------------:|
+| 1. Critical Night Arrival Peak (21:00 - 03:00)  |       11.52 |      24.5  |       12.22 |
+| 2. Early Morning Departure Peak (03:00 - 07:00) |        9.26 |      20.14 |        7.96 |
+| 3. Shoulder Windows (07:00-09:00, 19:00-21:00)  |        6.89 |      18.64 |        8.3  |
+| 4. Daytime Off-Peak Trough (09:00 - 19:00)      |        7.29 |      20.19 |        7.71 |

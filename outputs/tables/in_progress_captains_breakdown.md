@@ -1,0 +1,9 @@
+| Last Stage / Pending Doc   |   In Progress Captains |   Share (%) |
+|:---------------------------|-----------------------:|------------:|
+| RC                         |                    311 |       23.98 |
+| PERMIT                     |                    224 |       17.27 |
+| FITNESS                    |                    218 |       16.81 |
+| INSURANCE                  |                    189 |       14.57 |
+| nan                        |                    187 |       14.42 |
+| AADHAAR                    |                     99 |        7.63 |
+| DL                         |                     69 |        5.32 |

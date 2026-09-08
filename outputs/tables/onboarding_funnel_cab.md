@@ -1,0 +1,10 @@
+| Stage                             |   Eligible Captains |   Completed |   Drop |   Stage Conversion (%) |   Cumulative Conversion (%) |   Share of Total Losses (%) |
+|:----------------------------------|--------------------:|------------:|-------:|-----------------------:|----------------------------:|----------------------------:|
+| 1. Signup                         |                8881 |        8881 |      0 |                 100    |                      100    |                        0    |
+| 2. Driving Licence (DL)           |                8881 |        7785 |   1096 |                  87.66 |                       87.66 |                       14.62 |
+| 3. Registration Certificate (RC)  |                7785 |        5566 |   2219 |                  71.5  |                       62.67 |                       29.61 |
+| 4. Aadhaar                        |                5566 |        4934 |    632 |                  88.65 |                       55.56 |                        8.43 |
+| 5. Permit (Auto/Cab) / Doc-4 Gate |                4934 |        3707 |   1227 |                  75.13 |                       41.74 |                       16.37 |
+| 6. Fitness Certificate            |                3707 |        2740 |    967 |                  73.91 |                       30.85 |                       12.9  |
+| 7. Insurance (All Docs Cleared)   |                2740 |        1528 |   1212 |                  55.77 |                       17.21 |                       16.17 |
+| 8. BG Check & Final Approval      |                1528 |        1386 |    142 |                  90.71 |                       15.61 |                        1.89 |

@@ -1,0 +1,4 @@
+intervention,baseline_unfulfilled_night,assumed_recovery_rate_pct,estimated_recovered_requests,assumption
+Forward dispatch / queueing,46020,10,4602,Recover 10% of observed night unmet demand; validate in pilot.
+Forward dispatch / queueing,46020,20,9204,Recover 20% of observed night unmet demand; validate in pilot.
+Suburban return allowance,46020,10,4602,Separate pilot; do not add impact to dispatch scenario.

@@ -1,0 +1,7 @@
+doc_type,details_not_legible,document_expired,duplicate_document,image_blurred,name_mismatch,ocr_low_confidence,wrong_document_type,Total_Failures
+AADHAAR,164,233,107,266,304,196,180,1450
+DL,428,531,239,624,693,497,396,3408
+FITNESS,281,301,150,750,386,574,251,2693
+INSURANCE,272,244,106,569,304,417,214,2126
+PERMIT,189,467,141,270,362,239,253,1921
+RC,837,910,453,2288,1124,1773,789,8174

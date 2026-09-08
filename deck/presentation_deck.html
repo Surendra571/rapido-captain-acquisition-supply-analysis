@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Executive Presentation Deck - Rapido Supply Strategy</title>
+<style>
+  @page {
+    size: 297mm 210mm landscape;
+    margin: 0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    color: #1e293b;
+    font-size: 13pt;
+  }
+  .slide {
+    width: 297mm;
+    height: 210mm;
+    page-break-after: always;
+    box-sizing: border-box;
+    padding: 16mm 20mm;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .slide:last-child {
+    page-break-after: avoid;
+  }
+  .header {
+    border-bottom: 2.5px solid #0284c7;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .slide-title {
+    font-size: 19pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .slide-subtitle {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #0284c7;
+    margin: 2px 0 0 0;
+  }
+  .slide-number {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #64748b;
+  }
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 6px;
+  }
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0284c7;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .card-alert {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .card-danger {
+    background: #fef2f2;
+    border: 1px solid #fee2e2;
+    border-left: 4px solid #ef4444;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .card-success {
+    background: #f0fdf4;
+    border: 1px solid #dcfce7;
+    border-left: 4px solid #10b981;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .card h4 {
+    margin: 0 0 4px 0;
+    font-size: 12pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .card p {
+    margin: 0;
+    font-size: 10pt;
+    line-height: 1.35;
+    color: #334155;
+  }
+  ul {
+    margin: 4px 0;
+    padding-left: 20px;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+  li { margin-bottom: 5px; }
+  strong { color: #0f172a; font-weight: 700; }
+  .metric-badge {
+    display: inline-block;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">Executive Strategy Briefing</div>
+      <div class="slide-subtitle">Three Key Findings, Three Ranked Actions, and One Decisive Choice</div>
+    </div>
+    <div class="slide-number">Slide 1 / 6</div>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <h4>Finding 1: Onboarding Funnel Bleed</h4>
+        <p>Overall onboarding conversion is only <strong>16.82%</strong> (4,206 approved / 25,000 signups). The single largest volume loss is <strong>Registration Certificate (RC) Stage 3</strong>, where <strong>6,102 captains (29.35% of all losses)</strong> drop out—primarily due to mechanical photo blur and OCR errors on low-tier smartphones.</p>
+      </div>
+      <div class="card-alert">
+        <h4>Finding 2: Campaign WhatsApp Reality</h4>
+        <p>Campaign <code>CAMP_WA_002</code>'s claimed +17.90% lift is confounded by immortal-time bias (100% of recipients had already survived DL+RC). The true stage-matched observational lift is <strong>+4.48% pts (95% CI: +3.12% to +5.84% pts)</strong>, with 0% clicker advantage. <strong>Do NOT scale 5x without an RCT.</strong></p>
+      </div>
+      <div class="card-danger">
+        <h4>Finding 3: Airport Nocturnal Deficit</h4>
+        <p>Airport shortage is <strong>77.51% nocturnal (21:00–03:00)</strong> with 42,673 lost trips/mo. Daytime is 96.90% fulfilled. <strong>41.07% of trips drop in suburbs</strong> where return fares collapse to 11.06% (88.94% stranded rate), driving a <strong>24.50% cancellation rate</strong>.</p>
+      </div>
+      <div class="card-success">
+        <h4>The Big Business Decision</h4>
+        <p><strong>Do NOT fund broad airport captain acquisition.</strong> The airport is an open leaky bucket exporting drivers to suburbs. Instead, deploy <strong>Direct VAHAN API Auto-Fetch</strong>, <strong>Controlled Campaign RCT</strong>, and <strong>Forward-Dispatch & Suburban Return Subsidies</strong>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Rapido Marketplace & Supply Strategy</div>
+    <div>Strictly Confidential — For Head of Supply</div>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">Onboarding Funnel Performance</div>
+      <div class="slide-subtitle">16.82% End-to-End Conversion: RC Verification is the Primary Drop-off Gate</div>
+    </div>
+    <div class="slide-number">Slide 2 / 6</div>
+  </div>
+  <div class="content">
+    <ul>
+      <li><strong>Baseline Scale</strong>: 25,000 captain signups &rarr; 4,206 approved (<strong>16.82% A2O</strong>) &rarr; 3,575 active (<strong>85.00% R2A</strong>).</li>
+      <li><strong>Sequential Funnel Flow</strong>:
+        <ul>
+          <li>Stage 1 (Signup): <strong>25,000</strong> (100.0%)</li>
+          <li>Stage 2 (Driving Licence): <strong>20,789</strong> (83.16% | -4,211 drop / 20.2% loss share)</li>
+          <li>Stage 3 (Registration Certificate): <strong>14,687</strong> (58.75% | <span class="metric-badge">-6,102 drop / 29.35% loss share</span>)</li>
+          <li>Stage 4 (Aadhaar): <strong>10,854</strong> (43.42% | -3,833 drop / 18.4% loss share)</li>
+          <li>Stage 5 (Permit - Auto/Cab): <strong>7,921</strong> (31.68% | -2,933 drop / 14.1% loss share; ERickshaws exempt)</li>
+          <li>Stage 6 (Fitness Certificate): <strong>5,612</strong> (22.45% | -2,309 drop / 11.1% loss share)</li>
+          <li>Stage 7 (Insurance): <strong>4,206</strong> (16.82% | -1,406 drop / 6.8% loss share) &rarr; <strong>Approved: 4,206 (16.82%)</strong></li>
+        </ul>
+      </li>
+      <li><strong>Cohort Maturity Rule</strong>: Average completion requires 6.42 days. All 1,297 in-progress captains are isolated to the final 15 days (&ge; June 15). Mature cohorts (&lt; June 15) convert at <strong>17.57%</strong>.</li>
+    </ul>
+  </div>
+  <div class="footer">
+    <div>Source: captains.csv, doc_events.csv, approvals.csv, activation.csv</div>
+    <div>100% Mathematically Reconciled</div>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">The Primary Fixable Leak: Vehicle RC</div>
+      <div class="slide-subtitle">63.63% of Failures are Fixable Camera Blur & OCR Mismatches on Low-Tier Devices</div>
+    </div>
+    <div class="slide-number">Slide 3 / 6</div>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <h4>The Quantitative Evidence</h4>
+        <ul>
+          <li><strong>6,102 Captains Lost</strong> at RC Stage 3 (29.35% of total platform losses).</li>
+          <li><strong>34.82% Verification Failure Rate</strong> on RC uploads.</li>
+          <li><strong>50.10% Failure Abandonment</strong>: Half of all captains who fail RC never re-upload another document.</li>
+        </ul>
+      </div>
+      <div class="card-alert">
+        <h4>Root Cause & Device Disparity</h4>
+        <ul>
+          <li><strong>63.63% Fixable Failures</strong>: Blurry photo (39.54%) + Name/Chassis OCR mismatch (24.09%).</li>
+          <li><strong>Device Tier Divide</strong>: Low-tier phone users convert at only <strong>13.42%</strong> (vs 21.81% high-tier) and suffer <strong>75.6% of all blur errors</strong>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-success" style="margin-top: 10px;">
+      <h4>The Operational Solution & Sized Opportunity</h4>
+      <p><strong>Direct VAHAN / DigiLocker API Integration</strong>: Replace photo uploads with instant vehicle registration number entry + OTP auto-fetch. Unlocks <strong>+75 to +85 approved captains / month (+450 to +510 over 6 months)</strong> at near-zero marginal cost.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Source: doc_events.csv failure reason taxonomy & device tier cross-tabulation</div>
+    <div>High Operational Actionability</div>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">Evaluating Campaign CAMP_WA_002</div>
+      <div class="slide-subtitle">Naive +17.9% Claim is Confounded by Survival Bias; Adjusted Lift is +4.5% pts</div>
+    </div>
+    <div class="slide-number">Slide 4 / 6</div>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card-danger">
+        <h4>The Fatal Immortal-Time Bias</h4>
+        <p>The naive claim (34.72% vs 16.82% &rarr; +17.90% pts) compares drivers who <strong>already survived DL and RC hurdles (100% of treated)</strong> against raw signups who dropped out at Step 1. This is fundamentally comparing apples to oranges.</p>
+      </div>
+      <div class="card">
+        <h4>Stage-Matched Observational Evidence</h4>
+        <p>Comparing treated drivers against controls who also cleared DL+RC yields <strong>28.51% vs 24.14% (+4.37% pts)</strong>. Logistic regression adjusting for city, vehicle, channel, device tier, age, and month yields <strong>+4.48% pts (95% CI: +3.12% to +5.84% pts)</strong>.</p>
+      </div>
+    </div>
+    <div class="card-alert" style="margin-top: 10px;">
+      <h4>The Complier Test & Business Decision</h4>
+      <ul>
+        <li><strong>Zero Clicker Advantage</strong>: Drivers who clicked the WhatsApp link converted at <strong>28.24%</strong> vs <strong>28.70%</strong> for non-clickers. Nudge acted as passive awareness.</li>
+        <li><strong>Decision</strong>: <strong>REJECT 5x budget scale.</strong> Launch a 50/50 RCT (N=3,305/arm) testing an automated 2-way failure-resolution bot before committing capital.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Source: nudges.csv, doc_events.csv, approvals.csv</div>
+    <div>Strictly Observational — Not Causal</div>
+  </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">Airport Supply & Marketplace Economics</div>
+      <div class="slide-subtitle">77.51% of Deficit is Nocturnal: Suburban Deadhead Risk Drives Supply Avoidance</div>
+    </div>
+    <div class="slide-number">Slide 5 / 6</div>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <h4>Temporal Shortage (21:00–03:00)</h4>
+        <ul>
+          <li><strong>42,673 Lost Trips / Month</strong> (77.51% of all unmet airport demand).</li>
+          <li>Fulfillment crashes to <strong>47.20%</strong> (26.24% at 23:00).</li>
+          <li>Surge averages <strong>2.17x</strong> and ETAs blow out to <strong>10.0 minutes</strong>.</li>
+          <li>Daytime (04:00–20:00) is <strong>96.90% fulfilled</strong> (Acquisition is redundant).</li>
+        </ul>
+      </div>
+      <div class="card-danger">
+        <h4>The Suburban Deadhead Trap</h4>
+        <ul>
+          <li><strong>41.07% of Airport Trips Drop in Suburbs</strong> (<code>SUB-07</code>, <code>SUB-11</code>).</li>
+          <li><strong>88.94% Night Stranded Rate</strong>: Only 11.06% get a return fare in 20 min.</li>
+          <li>Drivers face 30 km of unpaid return driving, driving <strong>night cancellations to 24.50%</strong> (vs 11.20% for CBD drops).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-alert" style="margin-top: 10px;">
+      <h4>Why Localized Airport Acquisition Fails</h4>
+      <p>Acquiring drivers living near the airport treats the terminal as a silo. Within 48 hours, acquired drivers take suburban trips, get stranded, and leave the catchment empty. The airport is a <strong>leaky bucket</strong>.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Source: airport_hourly.csv (2,184 hrs) & airport_trips.csv (60,000 trips)</div>
+    <div>Spatial Network Dynamics</div>
+  </div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+  <div class="header">
+    <div>
+      <div class="slide-title">Decision & Three Ranked Recommendations</div>
+      <div class="slide-subtitle">Do NOT Acquire Local Drivers; Fund VAHAN API, Campaign RCT, and Airport Rebalancing</div>
+    </div>
+    <div class="slide-number">Slide 6 / 6</div>
+  </div>
+  <div class="content">
+    <div class="card-grid-3">
+      <div class="card-success">
+        <h4>#1. Direct VAHAN API & Blur Guidance</h4>
+        <p><strong>Target</strong>: RC Stage 3 (6,102 drops; 63.6% blur errors).<br>
+        <strong>Impact</strong>: <span class="metric-badge">+75 to +85 Approved Drivers/mo</span> (+450 to +510 over 6 mo).<br>
+        <strong>Metric</strong>: RC Pass Rate &ge; 82% (from 65.2%).<br>
+        <strong>Cost</strong>: ₹5–8 API fee per lookup.</p>
+      </div>
+      <div class="card-alert">
+        <h4>#2. Controlled RCT on Nudges (CAMP_WA_002)</h4>
+        <p><strong>Target</strong>: False +17.9% claim; true lift +4.5%; 0% clicker lift.<br>
+        <strong>Impact</strong>: <span class="metric-badge">Protects ₹15–20L Budget</span>; sizes true incremental ROI; tests 2-way bot.<br>
+        <strong>Metric</strong>: 14-Day Lift &ge; +3.0% pts (RCT).<br>
+        <strong>Trial</strong>: 50/50 RCT (N=3,305/arm).</p>
+      </div>
+      <div class="card">
+        <h4>#3. Airport Forward-Dispatch & Return Subsidies</h4>
+        <p><strong>Target</strong>: 77.5% night shortage & 88.9% suburb deadhead.<br>
+        <strong>Impact</strong>: <span class="metric-badge">+15,500 to +20,000 Trips/mo</span> (Dispatch: +9k–12k; Return: +6.5k–8k).<br>
+        <strong>Metric</strong>: Night Fulfillment &ge; 70%, Suburb Cancels &lt; 10%.<br>
+        <strong>Cost</strong>: ₹120 allowance funded via surge.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 12px; background: #0f172a; color: #ffffff; border: none;">
+      <h4 style="color: #f59e0b;">Execution Roadmap for Monday Morning</h4>
+      <p style="color: #cbd5e1; font-size: 9.5pt;">Launch client-side blur camera overlay in app &bull; Initiate DigiLocker/VAHAN API vendor integration &bull; Freeze one-way WhatsApp blasts and deploy 50/50 RCT webhook &bull; Configure nocturnal suburb return guarantees in dispatch engine.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Rapido Executive Take-Home Assessment</div>
+    <div>Ready for Live Debrief</div>
+  </div>
+</div>
+
+</body>
+</html>

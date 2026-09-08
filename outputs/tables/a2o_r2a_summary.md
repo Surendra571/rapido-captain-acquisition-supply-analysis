@@ -1,0 +1,5 @@
+| metric                      |   numerator |   denominator |   rate_pct |
+|:----------------------------|------------:|--------------:|-----------:|
+| A2O (signup to approved)    |        4206 |         25000 |      16.82 |
+| R2A (signup to first order) |        4104 |         25000 |      16.42 |
+| Activation after approval   |        4104 |          4206 |      97.57 |

@@ -1,0 +1,5 @@
+age_band,signup_volume,approval_volume,in_progress_volume,rejected_volume,dropped_volume,approval_rate_pct,drop_off_rate_pct,absolute_lost_captains,contribution_to_total_losses_pct,share_of_signups_pct
+25-34,10397,1722,560,182,7933,16.56,78.05,8675,41.72,41.59
+35-44,7086,1228,358,119,5381,17.33,77.62,5858,28.17,28.34
+18-24,4540,757,234,80,3469,16.67,78.17,3783,18.19,18.16
+45+,2977,499,145,54,2279,16.76,78.37,2478,11.92,11.91

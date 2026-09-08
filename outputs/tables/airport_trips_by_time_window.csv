@@ -1,0 +1,5 @@
+time_window,total_trips,share_of_trips_pct,captain_cancelled_pct,return_fare_within_20min_pct,avg_fare_inr,avg_distance_km
+1. Critical Night Arrival Peak (21:00 - 03:00),15114,25.19,16.96,30.6,278.59,17.82
+2. Early Morning Departure Peak (03:00 - 07:00),9943,16.57,13.5,34.99,279.53,17.86
+"3. Shoulder Windows (07:00-09:00, 19:00-21:00)",10136,16.89,12.0,39.07,280.27,17.96
+4. Daytime Off-Peak Trough (09:00 - 19:00),24807,41.34,12.65,38.34,279.37,17.9

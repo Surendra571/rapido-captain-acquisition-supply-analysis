@@ -1,0 +1,5 @@
+city,signup_volume,approval_volume,in_progress_volume,rejected_volume,dropped_volume,approval_rate_pct,drop_off_rate_pct,absolute_lost_captains,contribution_to_total_losses_pct,share_of_signups_pct
+Hyderabad,7663,1264,397,132,5870,16.49,78.32,6399,30.77,30.65
+Delhi,6452,1206,319,121,4806,18.69,76.36,5246,25.23,25.81
+Pune,5448,839,310,87,4212,15.4,78.91,4609,22.17,21.79
+Bangalore,5437,897,271,95,4174,16.5,78.52,4540,21.83,21.75

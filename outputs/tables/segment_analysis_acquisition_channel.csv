@@ -1,0 +1,6 @@
+acquisition_channel,signup_volume,approval_volume,in_progress_volume,rejected_volume,dropped_volume,approval_rate_pct,drop_off_rate_pct,absolute_lost_captains,contribution_to_total_losses_pct,share_of_signups_pct
+organic_app,8418,1220,453,127,6618,14.49,80.13,7198,34.62,33.67
+fos_field,6122,1586,304,158,4074,25.91,69.13,4536,21.81,24.49
+referral,5518,853,288,83,4294,15.46,79.32,4665,22.43,22.07
+paid_digital,3483,341,173,26,2943,9.79,85.24,3142,15.11,13.93
+gc_telecalling,1459,206,79,41,1133,14.12,80.47,1253,6.03,5.84

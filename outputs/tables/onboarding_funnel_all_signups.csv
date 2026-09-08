@@ -1,0 +1,9 @@
+Stage,Eligible Captains,Completed,Drop Volume,Step Conversion (%),Cumulative Conversion (%),Share of Total Losses (%)
+1. Signup,25000,25000,0,100.0,100.0,0.0
+2. Driving Licence (DL),25000,21954,3046,87.82,87.82,14.65
+3. Registration Certificate (RC),21954,15852,6102,72.21,63.41,29.35
+4. Aadhaar,15852,14095,1757,88.92,56.38,8.45
+5. Permit / Doc-4 Gate,14095,11177,2918,79.3,44.71,14.03
+6. Fitness Certificate,11177,8241,2936,73.73,32.96,14.12
+7. Insurance,8241,4664,3577,56.6,18.66,17.2
+8. Final Approval,4664,4206,458,90.18,16.82,2.2

@@ -1,0 +1,4 @@
+drop_zone_type,total_trips,cancellation_rate_pct,return_fare_rate_pct,avg_fare_inr,median_fare_inr,avg_distance_km,trip_share_pct
+city_core,25282,8.63,52.72,216.62,207.0,13.24,42.14
+suburban,24643,21.0,16.53,353.57,342.0,23.38,41.07
+tech_park,10075,8.96,41.43,255.23,246.0,16.1,16.79
